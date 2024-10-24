@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Budget</title>
+      <link rel="icon" href="data:,">
+      <link rel="stylesheet" href="style.css">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Croissant+One&family=Montagu+Slab:opsz@16..144&display=swap" rel="stylesheet">
+
+    </head>
+   <body>
+      <div id="container">
+        <div class="heading">
+           <h1>Monthly Budget Worksheet</h1>
+        </div>
+        <form>
+           <div class="containerInfo">
+              <div class="box-header">
+                 <div class="heading">
+                    <h3 class="margin"><span class="uppercase">Income</span><br><span class="smallerSize">[starting 
+                     balance]</span></h3>
+                 </div>
+                 <div class="containerInputs">
+                    <input type="text" id="balance" placeholder="$...">
+                 </div>
+              </div>
+              <div class="box-header">
+                 <div class="heading">
+                    <h3><span class="uppercase">Savings</span></h3>
+                 </div>
+                 <div class="containerInputs">
+                    <select id="save" class="optionSavings">
+                       <option disabled>Select your option</option>
+                       <option value="0.01">1%</option>
+                       <option value="0.03">3%</option>
+                       <option value="0.05">5%</option>
+                       <option value="0.07">7%</option>
+                       <option value="0.10">10%</option>
+                       <option value="0.13">13%</option>
+                       <option value="0.15">15%</option>
+                       <option value="0.20">20%</option>
+                       <option value="0.00" selected>None</option>
+                    </select>
+                 </div>
+              </div>
+           </div>
+           <div class="containerExpensesAndTotal">
+              <div class="containerExpenses">
+                 <div class="heading">
+                    <h3><span class="uppercase">Monthly expenses</span></h3>
+                 </div>
+                 <div class="expenses">
+                    <div class="box">
+                       <p class="expensesName">Rent/mortgage</p>
+                       <input type="text" class="inputExpenses" id="rent" placeholder="$...">
+                    </div>
+                    <div class="box">
+                       <p class="expensesName">Gas/electric</p>
+                       <input type="text" class="inputExpenses" id="gas" placeholder="$...">
+                    </div>
+                    <div class="box">
+                       <p class="expensesName">Water/sewer</p>
+                       <input type="text" class="inputExpenses" id="water" placeholder="$...">                   
+                    </div>
+                    <div class="box">
+                       <p class="expensesName">Vehicle payment</p>
+                       <input type="text" class="inputExpenses" id="vehicle" placeholder="$...">
+                    </div>
+                    <div class="box">
+                       <p class="expensesName">Insurance</p>
+                       <input type="text" class="inputExpenses" id="insurance" placeholder="$...">
+                    </div>
+                    <div class="box">
+                       <p class="expensesName">Groceries</p>
+                       <input type="text" class="inputExpenses" id="food" placeholder="$...">
+                    </div>
+                    <div class="box">
+                       <p class="expensesName">Shopping</p>
+                       <input type="text" class="inputExpenses" id="shopping" placeholder="$...">
+                    </div>
+                    <div class="box">
+                       <p class="expensesName">Going out</p>
+                       <input type="text" class="inputExpenses" id="fun" placeholder="$...">
+                    </div>
+                    <div class="box">
+                       <p class="expensesName">Taxes</p>
+                       <input type="text" class="inputExpenses" id="taxes" placeholder="$...">
+                    </div>
+                    <div class="box">
+                       <p class="expensesName">Other</p>
+                       <input type="text" class="inputExpenses" id="other" placeholder="$...">
+                    </div>
+                 </div>
+              </div>
+              <div class="containerTotal">
+                 <div class="heading headingBtn">
+                    <h3><span class="uppercase">Expense totals</span></h3>
+                    <button id="btn">Calculate</button>
+                 </div>
+                 <div class="total">
+                    <div class="box">
+                       <p class="expensesName"><b>Income balance:</b></p>
+                       <p id="totalBalance" class="underline">$</p>
+                    </div>
+                    <div class="box">
+                       <p class="expensesName"><b>Minus savings:</b></p>
+                       <p id="totalSavings" class="underline">$</p>
+                    </div>
+                    <div class="box">
+                       <p class="expensesName"><b>Minus expenses:</b></p>
+                       <p id="totalExpenses" class="underline">$</p>
+                    </div>
+                    <div class="box">
+                       <p class="expensesName"><b>Total left over:</b></p>
+                       <p id="totalMonies" class="underline">$</p>
+                    </div>
+                 </div>
+              </div>
+           </div>
+        </form>
+     </div>
+      <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>       
+      <script src="scriptBudget.js"></script>
+   </body>
+</html>
