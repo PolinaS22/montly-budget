@@ -12,7 +12,7 @@ function calculate(e) {
             Swal.fire({
                 icon: 'error',
                 title: 'Please, fill all the inputs!',
-                text: 'If there is no value, submit 0'     
+                text: 'If there is no value, set 0'     
             })
             return false;
         } else {
